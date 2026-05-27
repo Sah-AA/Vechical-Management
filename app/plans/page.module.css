@@ -1,0 +1,753 @@
+/* Main Container */
+.mainContainer {
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.contentWrapper {
+  padding: 28px 28px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Summary Cards Grid */
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.summaryCard {
+  padding: 18px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.summaryCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 16px 16px 0 0;
+}
+
+.summaryCardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.summaryCardContent {
+  flex: 1;
+}
+
+.summaryCardLabel {
+  color: var(--foreground-subtle);
+  font-size: 11.5px;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+.summaryCardValue {
+  font-family: Syne, sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: var(--foreground);
+  letter-spacing: -0.03em;
+}
+
+.summaryCardIcon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header Section */
+.headerSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerContent {
+  font-family: Syne, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--foreground);
+}
+
+/* Plan Cards Grid */
+.plansGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 18px;
+}
+
+.planCard {
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.planCardGold {
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  box-shadow:
+    0 0 0 1px rgba(245, 158, 11, 0.08),
+    0 4px 16px rgba(245, 158, 11, 0.08);
+}
+
+.planCardBadge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: var(--amber-glow);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.planCardBadgeText {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--amber-dark);
+  font-family:
+    DM Sans,
+    sans-serif;
+}
+
+.planCardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.planCardIcon {
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.planCardTitleSection {
+  flex: 1;
+}
+
+.planCardTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 3px;
+}
+
+.planCardTitle {
+  font-family: Syne, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--foreground);
+}
+
+.planCardDescription {
+  font-size: 12px;
+  color: var(--foreground-subtle);
+  margin-top: 2px;
+}
+
+/** Under title: only subscription length — caps stay in stat boxes & comparison table. */
+.planValidityHighlight {
+  display: inline-block;
+  margin-top: 2px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-family: Syne, sans-serif;
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 0.02em;
+  color: var(--amber-dark);
+  background: rgba(245, 158, 11, 0.14);
+  border: 1px solid rgba(245, 158, 11, 0.38);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
+}
+
+.planCardStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.planCardStatItem {
+  background: #fafaf8;
+  border-radius: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--card-border);
+}
+
+.planCardStatLabel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.planCardStatLabelText {
+  font-size: 10.5px;
+  color: var(--foreground-subtle);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.planCardStatValue {
+  font-family: Syne, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--foreground);
+}
+
+.planCardFeatures {
+  margin-bottom: 20px;
+}
+
+.planCardFeaturesLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--foreground-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 10px;
+}
+
+.planCardFeaturesList {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.planCardFeatureItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.planCardFeatureIcon {
+  color: #059669;
+  flex-shrink: 0;
+}
+
+.planCardFeatureIconAmber {
+  color: var(--amber);
+  flex-shrink: 0;
+}
+
+.planCardFeatureText {
+  font-size: 12.5px;
+  color: var(--foreground-muted);
+}
+
+.planCardFeatureTextBold {
+  font-size: 12.5px;
+  color: var(--foreground-muted);
+  font-weight: 500;
+}
+
+.planCardFooter {
+  display: flex;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--card-border);
+}
+
+.planCardButtonDelete {
+  color: #dc2626;
+  border-color: #fca5a5;
+}
+
+/* Delete Confirmation Modal */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 18, 16, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.modalContent {
+  width: 380px;
+  padding: 28px 28px 24px;
+}
+
+.modalIconBox {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #fee2e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.modalIconTrash {
+  color: #dc2626;
+}
+
+.modalTitle {
+  font-family: Syne, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--foreground);
+  margin-bottom: 6px;
+}
+
+.modalDescription {
+  font-size: 13px;
+  color: var(--foreground-muted);
+  line-height: 1.6;
+}
+
+.modalActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+  justify-content: flex-end;
+}
+
+.modalDeleteButton {
+  background: #dc2626;
+  color: white;
+  padding: 8px 18px;
+  font-size: 13.5px;
+  font-weight: 600;
+  border-radius: 9px;
+}
+
+/* Comparison Table */
+.comparisonCard {
+  overflow: hidden;
+}
+
+.comparisonHeader {
+  padding: 18px 24px 16px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.comparisonTitle {
+  font-family: Syne, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--foreground);
+  margin-bottom: 2px;
+}
+
+.comparisonDescription {
+  color: var(--foreground-subtle);
+  font-size: 12px;
+}
+
+.comparisonTableWrapper {
+  overflow-x: auto;
+}
+
+.tableFeature {
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.tableValueCheckmark {
+  color: #059669;
+}
+
+.tableValueCheckmarkBold {
+  color: #059669;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.tableValueDash {
+  color: var(--foreground-subtle);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.tableValueDefault {
+  color: var(--foreground);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animateFadeUp {
+  animation: fadeUp 0.5s ease-out forwards;
+}
+
+.stagger1 {
+  animation-delay: 0.05s;
+}
+
+.stagger2 {
+  animation-delay: 0.1s;
+}
+
+.stagger3 {
+  animation-delay: 0.15s;
+}
+
+.stagger4 {
+  animation-delay: 0.2s;
+}
+
+.stagger5 {
+  animation-delay: 0.25s;
+}
+
+/* Utility Classes */
+.flex {
+  display: flex;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemsCenter {
+  align-items: center;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifyBetween {
+  justify-content: space-between;
+}
+
+.gapSmall {
+  gap: 5px;
+}
+
+.gapMedium {
+  gap: 8px;
+}
+
+.gapLarge {
+  gap: 10px;
+}
+
+/* Owner / manager — current plan summary */
+.userSummaryCard {
+  position: relative;
+  padding: 22px 24px 24px;
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  background: linear-gradient(
+    165deg,
+    var(--card-bg) 0%,
+    rgba(250, 250, 248, 0.98) 48%,
+    rgba(255, 251, 235, 0.35) 100%
+  );
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.65) inset,
+    0 8px 28px rgba(20, 18, 16, 0.06);
+  overflow: hidden;
+}
+
+.userSummaryCard::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 16px 0 0 16px;
+  background: linear-gradient(180deg, #f59e0b 0%, #d97706 55%, #c2410c 100%);
+  opacity: 0.95;
+}
+
+.userSummaryCardLoading {
+  min-height: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userSummaryCardLoading::before {
+  background: linear-gradient(180deg, #94a3b8, #64748b);
+}
+
+.userSummaryLoadingInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+}
+
+.userSummarySpinner {
+  animation: spin 0.85s linear infinite;
+  color: var(--amber-dark);
+}
+
+.userSummaryLoadingText {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--foreground-muted);
+}
+
+.userSummaryCardEmpty {
+  text-align: center;
+}
+
+.userSummaryCardEmpty::before {
+  background: linear-gradient(180deg, #cbd5e1, #94a3b8);
+}
+
+.userSummaryEmptyInner {
+  padding: 12px 8px 8px;
+}
+
+.userSummaryEmptyTitle {
+  margin: 14px 0 4px;
+  font-family: Syne, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--foreground);
+}
+
+.userSummaryEmptyHint {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--foreground-muted);
+  line-height: 1.45;
+}
+
+.userSummaryIconMuted {
+  margin: 0 auto;
+  background: rgba(148, 163, 184, 0.18);
+  color: #64748b;
+}
+
+.userSummaryHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  padding: 4px 0 18px 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.userSummaryHeaderMain {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.userSummaryHeroIcon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.userSummaryHeroGold {
+  background: linear-gradient(145deg, #fffbeb 0%, #fde68a 100%);
+  color: #b45309;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+.userSummaryHeroFree {
+  background: linear-gradient(145deg, #f8fafc 0%, #e2e8f0 100%);
+  color: #475569;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.userSummaryHeroDefault {
+  background: linear-gradient(145deg, #fff7ed 0%, #fed7aa 100%);
+  color: #c2410c;
+  border: 1px solid rgba(251, 146, 60, 0.3);
+}
+
+.userSummaryEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 4px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--foreground-subtle);
+}
+
+.userSummaryPlanName {
+  font-family: Syne, sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -0.03em;
+  color: var(--foreground);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.userSummaryBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  padding: 8px 14px;
+  border-radius: 99px;
+  background: linear-gradient(
+    135deg,
+    rgba(5, 150, 105, 0.14) 0%,
+    rgba(5, 150, 105, 0.08) 100%
+  );
+  border: 1px solid rgba(5, 150, 105, 0.28);
+  color: #059669;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.userSummaryContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 6px;
+}
+
+.userSummaryRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.userSummaryRow:hover {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(245, 158, 11, 0.18);
+}
+
+.userSummaryRowLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  flex: 1;
+}
+
+.userSummaryIconWrap {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.userSummaryIconAmber {
+  background: rgba(245, 158, 11, 0.14);
+  color: #b45309;
+}
+
+.userSummaryIconEmerald {
+  background: rgba(5, 150, 105, 0.12);
+  color: #047857;
+}
+
+.userSummaryIconSky {
+  background: rgba(14, 165, 233, 0.12);
+  color: #0369a1;
+}
+
+.userSummaryIconOrange {
+  background: rgba(234, 88, 12, 0.12);
+  color: #c2410c;
+}
+
+.userSummaryRowLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--foreground-muted);
+  line-height: 1.35;
+}
+
+.userSummaryRowValue {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: Syne, sans-serif;
+  color: var(--foreground);
+  text-align: right;
+  flex-shrink: 0;
+  max-width: 52%;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.userSummaryValueWarn {
+  color: #dc2626;
+}
+
+@media (max-width: 520px) {
+  .userSummaryHeader {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .userSummaryBadge {
+    align-self: flex-start;
+  }
+
+  .userSummaryRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .userSummaryRowValue {
+    max-width: 100%;
+    width: 100%;
+    text-align: left;
+    padding-left: 50px;
+  }
+}

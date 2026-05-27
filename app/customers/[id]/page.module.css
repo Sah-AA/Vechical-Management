@@ -1,0 +1,550 @@
+.page {
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.container {
+  padding: 28px 28px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.statePage {
+  min-height: 100vh;
+  background: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stateCard {
+  text-align: center;
+}
+
+.stateText {
+  font-size: 16px;
+  color: var(--foreground-muted);
+  margin-bottom: 16px;
+}
+
+.backBtn {
+  gap: 7px;
+  font-size: 13px;
+  width: fit-content;
+}
+
+.headerCard {
+  padding: 28px 30px;
+}
+
+.headerRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  color: #141210;
+  flex-shrink: 0;
+}
+
+.name {
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--foreground);
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.metaItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: var(--foreground-muted);
+}
+
+.badgeRow {
+  margin-top: 8px;
+}
+
+.whatsAppBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 10px;
+  border: 1px solid #22c55e;
+  background: rgba(34, 197, 94, 0.08);
+  color: #16a34a;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+  transition: all 0.15s;
+}
+
+.metricGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.metricCard {
+  padding: 18px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.metricTopBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  opacity: 0.8;
+  border-radius: 16px 16px 0 0;
+}
+
+.metricContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.metricLabel {
+  color: var(--foreground-subtle);
+  font-size: 11.5px;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+.metricValue {
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--foreground);
+  letter-spacing: -0.03em;
+}
+
+.metricIcon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.blockCard {
+  padding: 24px 26px;
+}
+
+.blockTitle {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--foreground);
+  margin-bottom: 16px;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.paidCard,
+.pendingCard {
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.paidCard {
+  background: var(--emerald-light);
+  border: 1px solid #a7f3d0;
+}
+
+.pendingCard {
+  background: #fff7ed;
+  border: 1px solid #fdba74;
+}
+
+.summaryLabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+
+.summaryValuePaid,
+.summaryValuePending {
+  font-size: 22px;
+  font-weight: 800;
+  font-family: "Syne", sans-serif;
+}
+
+.summaryValuePaid {
+  color: #059669;
+}
+
+.summaryValuePending {
+  color: #ea580c;
+}
+
+.summaryHint,
+.summaryHintPending {
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.summaryHint {
+  color: #059669;
+}
+
+.summaryHintPending {
+  color: #ea580c;
+}
+
+.progressHead {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.progressLabel {
+  font-size: 12px;
+  color: var(--foreground-muted);
+}
+
+.progressPercent {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.progressTrack {
+  height: 8px;
+  background: #f0eee9;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.5s ease;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.infoRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 12px;
+  background: #fafaf8;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+}
+
+.infoIconWrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: var(--amber-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.infoLabel {
+  font-size: 10.5px;
+  color: var(--foreground-subtle);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.infoValue {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-top: 2px;
+}
+
+.tableCard {
+  overflow: hidden;
+}
+
+.tableHead {
+  padding: 20px 26px 18px;
+  border-bottom: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tableTitle {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--foreground);
+  margin-bottom: 2px;
+}
+
+.tableSubtitle {
+  color: var(--foreground-subtle);
+  font-size: 12px;
+}
+
+.entryBadge {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--foreground-subtle);
+  background: #f5f4f0;
+  padding: 4px 12px;
+  border-radius: 99px;
+  border: 1px solid var(--card-border);
+}
+
+.emptyState {
+  padding: 48px;
+  text-align: center;
+  color: var(--foreground-subtle);
+  font-style: italic;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.serial {
+  color: var(--foreground-subtle);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.cellWithIcon {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.cellIconMuted {
+  color: var(--foreground-subtle);
+}
+
+.cellIconBlue {
+  color: #0ea5e9;
+}
+
+.hours {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.amount {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--amber-dark);
+}
+
+.tableFooter {
+  padding: 14px 26px;
+  border-top: 1px solid var(--card-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafaf8;
+}
+
+.footerTotals {
+  display: flex;
+  gap: 20px;
+}
+
+.footerItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footerText {
+  font-size: 12.5px;
+  color: var(--foreground-subtle);
+}
+
+.green {
+  color: #059669;
+}
+
+.orange {
+  color: #ea580c;
+}
+
+.paymentCard {
+  padding: 24px 26px 22px;
+}
+
+.paymentCardHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.paymentIntro {
+  font-size: 13px;
+  color: var(--foreground-muted);
+  line-height: 1.45;
+  margin-top: 6px;
+  max-width: 720px;
+}
+
+.paymentForm {
+  margin-bottom: 20px;
+}
+
+.paymentFormGrid {
+  display: grid;
+  grid-template-columns: minmax(120px, 160px) minmax(140px, 170px) 1fr minmax(140px, 200px);
+  gap: 12px 14px;
+  align-items: end;
+}
+
+.paymentField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.paymentFieldGrow {
+  min-width: 0;
+}
+
+.paymentLabel {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--foreground-subtle);
+}
+
+.paymentSubmitWrap {
+  display: flex;
+  align-items: flex-end;
+}
+
+.paymentEmpty {
+  font-size: 13px;
+  color: var(--foreground-muted);
+  padding: 12px 0 4px;
+}
+
+.paymentTableWrap {
+  border-top: 1px solid var(--card-border);
+  padding-top: 12px;
+}
+
+.paymentNotesCell {
+  font-size: 13px;
+  color: var(--foreground);
+  max-width: 280px;
+}
+
+@keyframes spinIcon {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spinIcon 0.75s linear infinite;
+}
+
+@media (max-width: 1100px) {
+  .paymentFormGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .paymentSubmitWrap {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .metricGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .twoCol {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 18px 14px 28px;
+  }
+
+  .metricGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .headerCard,
+  .blockCard,
+  .tableHead,
+  .tableFooter {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+}
