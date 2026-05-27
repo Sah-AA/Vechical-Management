@@ -4,7 +4,7 @@ import AuthGate from "../components/AuthGate";
 import { AppProviders } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "JCB Admin Panel",
+  title: "VeX Admin Panel",
   description: "JCB / Tractor Management Admin Panel",
 };
 
